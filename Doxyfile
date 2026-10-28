@@ -1,0 +1,15 @@
+PROJECT_NAME           = "cpp-sma"
+PROJECT_BRIEF          = "Simple moving average in C++20"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = README.md include src
+FILE_PATTERNS          = *.md *.hpp *.cpp
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+USE_MDFILE_AS_MAINPAGE  = README.md
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+SOURCE_BROWSER         = YES
+HAVE_DOT               = NO
+WARNINGS               = YES
+WARN_IF_DOC_ERROR      = YES

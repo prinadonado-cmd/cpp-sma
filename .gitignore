@@ -74,3 +74,5 @@ Testing/
 /CMakeUserPresets.json
 
 /build-release/
+
+/docs/
