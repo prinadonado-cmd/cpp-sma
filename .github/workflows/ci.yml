@@ -32,4 +32,4 @@ jobs:
         run: ctest --test-dir build --output-on-failure --no-tests=error
 
       - name: Run benchmark
-        run: ./build/sma_benchmark --benchmark_min_time=0.2s --no-tests=error
+        run: ./build/sma_benchmark --benchmark_min_time=0.2s
