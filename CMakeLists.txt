@@ -31,3 +31,18 @@ target_link_libraries(sma_tests PRIVATE sma_lib GTest::gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(sma_tests)
+
+set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "" FORCE)
+set(BENCHMARK_ENABLE_GTEST_TESTS OFF CACHE BOOL "" FORCE)
+set(BENCHMARK_ENABLE_INSTALL OFF CACHE BOOL "" FORCE)
+
+FetchContent_Declare(
+    googlebenchmark
+    URL https://github.com/google/benchmark/archive/refs/tags/v1.9.5.zip
+    DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+)
+
+FetchContent_MakeAvailable(googlebenchmark)
+
+add_executable(sma_benchmark benchmarks/sma_benchmark.cpp)
+target_link_libraries(sma_benchmark PRIVATE sma_lib benchmark::benchmark)
